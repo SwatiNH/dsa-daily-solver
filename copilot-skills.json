@@ -1,0 +1,147 @@
+{
+  "skills": [
+    {
+      "name": "dsa-random-problem",
+      "displayName": "Get Random DSA Problem",
+      "description": "Presents a random DSA problem from any category to practice daily",
+      "instruction": "Use this to get a random DSA problem for daily practice. The problem is selected from all 15 DSA categories.",
+      "examples": [
+        "Give me a random DSA problem",
+        "I want a problem to solve today",
+        "Pick a DSA problem for me",
+        "Show me any DSA problem"
+      ],
+      "icon": "🎯",
+      "category": "DSA Practice",
+      "invocation": "skill_get_random_problem()",
+      "implementation_file": "dsa_manager.py"
+    },
+    {
+      "name": "dsa-by-category",
+      "displayName": "Get Problems by Category",
+      "description": "Shows all problems from a specific DSA category",
+      "instruction": "Use this to get all problems within a specific algorithmic category. Available categories include: Array, Sliding Window, Binary Search, DFS-BFS, Tree Traversal, Dynamic Programming, Intervals, Two Pointers, Sum, Monotonic Stack, Word Break, Bit Manipulation, Trie, Combination, and Backtracking.",
+      "examples": [
+        "Show me all sliding window problems",
+        "Get dynamic programming problems",
+        "What problems are in the tree traversal category?",
+        "List all backtracking problems"
+      ],
+      "icon": "📚",
+      "category": "DSA Practice",
+      "parameters": [
+        {
+          "name": "category_name",
+          "type": "string",
+          "description": "Name of the DSA category",
+          "required": true,
+          "examples": [
+            "Sliding Window",
+            "Dynamic Programming",
+            "DFS-BFS",
+            "Array"
+          ]
+        }
+      ],
+      "invocation": "skill_get_category_problems(category_name)",
+      "implementation_file": "dsa_manager.py"
+    },
+    {
+      "name": "dsa-by-difficulty",
+      "displayName": "Get Problems by Difficulty",
+      "description": "Shows all DSA problems of a specific difficulty level",
+      "instruction": "Use this to filter problems by their difficulty level. Perfect for gradually increasing challenge as you progress through the course.",
+      "examples": [
+        "Show me all easy DSA problems",
+        "Get me some medium difficulty problems",
+        "List all hard DSA problems",
+        "I want to practice hard problems today"
+      ],
+      "icon": "⚡",
+      "category": "DSA Practice",
+      "parameters": [
+        {
+          "name": "difficulty",
+          "type": "string",
+          "description": "Difficulty level: easy, medium, or hard",
+          "required": true,
+          "enum": ["easy", "medium", "hard"],
+          "examples": [
+            "easy",
+            "medium",
+            "hard"
+          ]
+        }
+      ],
+      "invocation": "manager.get_problems_by_difficulty(difficulty)",
+      "implementation_file": "dsa_manager.py"
+    },
+    {
+      "name": "dsa-daily-challenge",
+      "displayName": "Get Today's Daily Challenge",
+      "description": "Provides today's deterministic DSA problem based on the date",
+      "instruction": "Use this to get today's specific daily challenge. The same day always returns the same problem, helping you build a consistent daily practice habit.",
+      "examples": [
+        "What's today's DSA challenge?",
+        "Give me my daily DSA problem",
+        "What should I practice today?",
+        "Show me the daily challenge"
+      ],
+      "icon": "🌟",
+      "category": "DSA Practice",
+      "invocation": "skill_get_daily_challenge()",
+      "implementation_file": "dsa_manager.py"
+    },
+    {
+      "name": "dsa-statistics",
+      "displayName": "DSA Repository Statistics",
+      "description": "Shows overview of all DSA problems and categories",
+      "instruction": "Use this to see statistics about the entire DSA problem repository, including total problems, categories, and difficulty breakdown.",
+      "examples": [
+        "Show me DSA statistics",
+        "How many problems are in this repo?",
+        "What are all the categories?",
+        "Give me an overview of the DSA problems"
+      ],
+      "icon": "📊",
+      "category": "DSA Practice",
+      "invocation": "skill_get_statistics()",
+      "implementation_file": "dsa_manager.py"
+    },
+    {
+      "name": "dsa-progression-path",
+      "displayName": "Get Learning Progression Path",
+      "description": "Shows the recommended order to learn DSA categories",
+      "instruction": "Use this to understand the optimal learning sequence. This path starts with fundamentals and gradually introduces more complex techniques.",
+      "examples": [
+        "What's the recommended learning order?",
+        "Show me the DSA progression path",
+        "What categories should I learn first?",
+        "Give me a learning roadmap"
+      ],
+      "icon": "🛣️",
+      "category": "DSA Learning",
+      "invocation": "manager.get_category_progression()",
+      "implementation_file": "dsa_manager.py"
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "created_at": "2026-06-05",
+    "total_skills": 6,
+    "target_users": [
+      "Senior Engineers",
+      "Lead Engineers",
+      "Interview Candidates",
+      "DSA Practitioners"
+    ],
+    "features": [
+      "Random problem selection",
+      "Category-based filtering",
+      "Difficulty-based filtering",
+      "Deterministic daily challenges",
+      "Learning progression path",
+      "Comprehensive statistics"
+    ]
+  }
+}

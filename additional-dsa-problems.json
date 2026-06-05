@@ -1,0 +1,772 @@
+{
+  "additional_problems": [
+    {
+      "id": 1,
+      "category": "Sliding Window",
+      "difficulty": "medium",
+      "description": "Master sliding window technique for array/string problems",
+      "original_problems": ["sw-1", "sw-2", "sw-3"],
+      "new_problems": [
+        {
+          "id": "sw-4",
+          "title": "Longest Substring Without Repeating Characters (Variant)",
+          "skill_focus": "Sliding window with hash map tracking",
+          "difficulty": "medium",
+          "description": "Find the longest substring without repeating characters. Use a sliding window approach with character frequency tracking.",
+          "key_concepts": [
+            "Two-pointer sliding window",
+            "Hash map for character tracking",
+            "Dynamic window expansion/contraction"
+          ],
+          "similar_to": "sw-1",
+          "estimated_time": "30-45 minutes",
+          "hint": "Maintain a window [left, right] and expand right. When duplicate found, shrink from left until duplicate removed.",
+          "approach": "Use a hash map to track character positions. When you encounter a character already in the window, move left pointer to skip the previous occurrence."
+        },
+        {
+          "id": "sw-5",
+          "title": "Max Consecutive Ones III",
+          "skill_focus": "Sliding window with counter constraint",
+          "difficulty": "medium",
+          "description": "Given a binary array and an integer k, find the maximum number of consecutive 1's you could create by flipping at most k 0's.",
+          "key_concepts": [
+            "Sliding window with constraint",
+            "Counter for zeros",
+            "Window optimization"
+          ],
+          "similar_to": "sw-2",
+          "estimated_time": "30-45 minutes",
+          "hint": "Expand window while counting zeros. When zeros exceed k, contract from left.",
+          "approach": "Use sliding window to track a subarray with at most k zeros. Expand right pointer and count zeros. When count exceeds k, shrink from left."
+        },
+        {
+          "id": "sw-6",
+          "title": "Minimum Window Substring (Variant)",
+          "skill_focus": "Sliding window with multiple character requirements",
+          "difficulty": "hard",
+          "description": "Given two strings s and t, find the minimum window in s that contains all characters in t. Characters in t can repeat.",
+          "key_concepts": [
+            "Advanced sliding window",
+            "Character frequency matching",
+            "Window contraction optimization"
+          ],
+          "similar_to": "sw-3",
+          "estimated_time": "45-60 minutes",
+          "hint": "Use two hash maps - one for target chars, one for window chars. Expand until valid, then contract to find minimum.",
+          "approach": "Maintain a frequency map of target characters. Use sliding window to find substrings containing all required characters. Optimize by contracting from left when valid."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "category": "Array",
+      "difficulty": "easy",
+      "description": "Fundamental array manipulation problems",
+      "original_problems": ["arr-1"],
+      "new_problems": [
+        {
+          "id": "arr-2",
+          "title": "Container With Most Water (Variant)",
+          "skill_focus": "Array traversal with greedy optimization",
+          "difficulty": "medium",
+          "description": "Given an integer array height where each element represents a vertical line's height, find two lines that together with the x-axis form a container that holds the most water.",
+          "key_concepts": [
+            "Two-pointer technique",
+            "Greedy approach",
+            "Array optimization"
+          ],
+          "similar_to": "arr-1",
+          "estimated_time": "30-45 minutes",
+          "hint": "Start with widest container. Move the pointer pointing to shorter line inward.",
+          "approach": "Use two pointers at start and end. Calculate area and move the pointer at shorter height inward (to potentially find taller lines)."
+        },
+        {
+          "id": "arr-3",
+          "title": "Rotate Array",
+          "skill_focus": "In-place array manipulation",
+          "difficulty": "medium",
+          "description": "Rotate an array to the right by k steps. Try to do it in-place with O(1) extra space.",
+          "key_concepts": [
+            "Array rotation",
+            "Reverse operation",
+            "In-place manipulation"
+          ],
+          "similar_to": "arr-1",
+          "estimated_time": "30-45 minutes",
+          "hint": "Try reversing segments of the array. Reverse first k elements, then remaining, then entire array.",
+          "approach": "Reverse the last k elements, reverse the first n-k elements, then reverse the entire array."
+        },
+        {
+          "id": "arr-4",
+          "title": "Best Time to Buy and Sell Stock",
+          "skill_focus": "Array traversal with optimal state tracking",
+          "difficulty": "easy",
+          "description": "Find the maximum profit you can get by buying and selling stocks. You must buy before you sell, and you can complete at most one transaction.",
+          "key_concepts": [
+            "Single pass traversal",
+            "State tracking (min price)",
+            "Profit calculation"
+          ],
+          "similar_to": "arr-1",
+          "estimated_time": "20-30 minutes",
+          "hint": "Track the minimum price seen so far and calculate profit at each step.",
+          "approach": "Maintain minimum price seen so far. At each position, calculate potential profit and update maximum."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "category": "Binary Search",
+      "difficulty": "medium",
+      "description": "Efficient searching techniques using binary search",
+      "original_problems": ["bs-1"],
+      "new_problems": [
+        {
+          "id": "bs-2",
+          "title": "Search in Rotated Sorted Array",
+          "skill_focus": "Binary search with pivot detection",
+          "difficulty": "medium",
+          "description": "Search for a target value in a rotated sorted array. The array was originally sorted in ascending order then rotated at an unknown pivot.",
+          "key_concepts": [
+            "Binary search variant",
+            "Identifying sorted half",
+            "Pivot detection"
+          ],
+          "similar_to": "bs-1",
+          "estimated_time": "30-45 minutes",
+          "hint": "Determine which half is sorted, then check if target is in that range.",
+          "approach": "Use binary search. At each step, identify which half is properly sorted. Check if target is in the sorted half, then adjust search accordingly."
+        },
+        {
+          "id": "bs-3",
+          "title": "Find First and Last Position of Element in Sorted Array",
+          "skill_focus": "Binary search for boundaries",
+          "difficulty": "medium",
+          "description": "Given a sorted array and a target value, find the starting and ending position of the target. If not found, return [-1, -1].",
+          "key_concepts": [
+            "Binary search adaptation",
+            "Finding boundaries",
+            "Leftmost and rightmost positions"
+          ],
+          "similar_to": "bs-1",
+          "estimated_time": "30-45 minutes",
+          "hint": "Run binary search twice - once for leftmost, once for rightmost position.",
+          "approach": "Perform two binary searches: one to find leftmost occurrence, one to find rightmost occurrence."
+        },
+        {
+          "id": "bs-4",
+          "title": "Peak Index in a Mountain Array",
+          "skill_focus": "Binary search without target value",
+          "difficulty": "medium",
+          "description": "An array is a mountain if it strictly increases then strictly decreases. Find the peak index (maximum value's index).",
+          "key_concepts": [
+            "Binary search without explicit target",
+            "Comparing adjacent elements",
+            "Mid-point decision logic"
+          ],
+          "similar_to": "bs-1",
+          "estimated_time": "25-35 minutes",
+          "hint": "Compare arr[mid] with neighbors. Peak is where left < mid > right.",
+          "approach": "Use binary search by comparing mid element with neighbors. If mid is less than right, go right. Otherwise, go left."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "category": "DFS-BFS",
+      "difficulty": "hard",
+      "description": "Graph traversal techniques - Depth First and Breadth First Search",
+      "original_problems": ["dfs-1", "dfs-2", "dfs-3", "dfs-4"],
+      "new_problems": [
+        {
+          "id": "dfs-5",
+          "title": "Number of Islands (Variant)",
+          "skill_focus": "DFS/BFS for connected components",
+          "difficulty": "medium",
+          "description": "Given a 2D grid of '1's (land) and '0's (water), count the number of islands. An island is surrounded by water and connected diagonally and orthogonally.",
+          "key_concepts": [
+            "Graph traversal",
+            "Connected components",
+            "2D grid navigation"
+          ],
+          "similar_to": "dfs-1",
+          "estimated_time": "30-40 minutes",
+          "hint": "Use DFS to mark all connected land cells as visited. Increment counter for each new island found.",
+          "approach": "Iterate through grid. When finding '1', perform DFS to mark all connected '1's as visited and increment island count."
+        },
+        {
+          "id": "dfs-6",
+          "title": "Clone Graph",
+          "skill_focus": "DFS with node mapping",
+          "difficulty": "medium",
+          "description": "Create a deep copy of an undirected graph. Each node contains a value and a list of neighbors.",
+          "key_concepts": [
+            "Graph traversal with mapping",
+            "Node cloning",
+            "Cycle handling in graphs"
+          ],
+          "similar_to": "dfs-2",
+          "estimated_time": "30-45 minutes",
+          "hint": "Use a hash map to track visited nodes and their clones. Use DFS to traverse and clone.",
+          "approach": "Maintain a map of original nodes to cloned nodes. Use DFS to traverse original graph, creating cloned nodes and connecting them."
+        },
+        {
+          "id": "dfs-7",
+          "title": "Course Schedule (Topological Sort)",
+          "skill_focus": "DFS for cycle detection and ordering",
+          "difficulty": "medium",
+          "description": "Given courses and prerequisites, determine if you can finish all courses. Return order if possible.",
+          "key_concepts": [
+            "Topological sorting",
+            "Cycle detection with DFS",
+            "Directed acyclic graphs"
+          ],
+          "similar_to": "dfs-3",
+          "estimated_time": "40-50 minutes",
+          "hint": "Use DFS with three states: unvisited, visiting, visited. Detect cycles during traversal.",
+          "approach": "Build adjacency list. Use DFS with color coding (white/gray/black) to detect cycles and produce topological order."
+        },
+        {
+          "id": "dfs-8",
+          "title": "Word Ladder",
+          "skill_focus": "BFS for shortest path",
+          "difficulty": "hard",
+          "description": "Find the shortest transformation sequence from start word to end word, where each intermediate word must exist in a word list and differ by exactly one letter.",
+          "key_concepts": [
+            "BFS for shortest path",
+            "Graph construction from word relationships",
+            "Level-order traversal"
+          ],
+          "similar_to": "dfs-4",
+          "estimated_time": "45-60 minutes",
+          "hint": "Use BFS from start word. For each word, find all neighbors (differ by one letter) and explore them level by level.",
+          "approach": "Build graph implicitly by finding neighbors (words differing by one char). Use BFS to find shortest path from start to end."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "category": "Tree Traversal",
+      "difficulty": "medium",
+      "description": "In-order, Pre-order, Post-order and Level-order tree traversals",
+      "original_problems": ["tree-1", "tree-2"],
+      "new_problems": [
+        {
+          "id": "tree-3",
+          "title": "Lowest Common Ancestor of a Binary Search Tree",
+          "skill_focus": "Tree traversal with value comparison",
+          "difficulty": "easy",
+          "description": "Find the lowest common ancestor (LCA) of two nodes in a binary search tree. Both nodes will exist in the tree.",
+          "key_concepts": [
+            "BST property utilization",
+            "Tree traversal",
+            "Path finding"
+          ],
+          "similar_to": "tree-1",
+          "estimated_time": "20-30 minutes",
+          "hint": "Use BST property: if both values are less than root, go left; if both greater, go right; otherwise root is LCA.",
+          "approach": "Traverse from root. If both node values are less than current node, go left. If both greater, go right. When they split, that's the LCA."
+        },
+        {
+          "id": "tree-4",
+          "title": "Binary Tree Maximum Path Sum",
+          "skill_focus": "Post-order traversal with state tracking",
+          "difficulty": "hard",
+          "description": "Find the maximum path sum in a binary tree. A path can start and end at any nodes in the tree.",
+          "key_concepts": [
+            "Post-order traversal",
+            "Dynamic programming on trees",
+            "Path computation"
+          ],
+          "similar_to": "tree-2",
+          "estimated_time": "40-50 minutes",
+          "hint": "For each node, calculate max path sum going through it. Track global maximum.",
+          "approach": "Use DFS post-order traversal. For each node, calculate max path sum with node as highest point and also max path extending from node."
+        },
+        {
+          "id": "tree-5",
+          "title": "Serialize and Deserialize Binary Tree",
+          "skill_focus": "Pre-order traversal with encoding",
+          "difficulty": "hard",
+          "description": "Serialize a binary tree to a string and deserialize the string back to the tree. Preserve structure.",
+          "key_concepts": [
+            "Pre-order traversal",
+            "String encoding/decoding",
+            "Tree reconstruction"
+          ],
+          "similar_to": "tree-1",
+          "estimated_time": "40-50 minutes",
+          "hint": "Use pre-order traversal for serialization. Use markers (like '#') for null nodes.",
+          "approach": "Serialize using pre-order DFS with null markers. Deserialize by parsing string and reconstructing tree using pre-order traversal."
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "category": "Dynamic Programming",
+      "difficulty": "hard",
+      "description": "Optimization problems using memoization and tabulation",
+      "original_problems": ["dp-1", "dp-2", "dp-3"],
+      "new_problems": [
+        {
+          "id": "dp-4",
+          "title": "Longest Increasing Subsequence",
+          "skill_focus": "DP with state array tracking",
+          "difficulty": "medium",
+          "description": "Find the length of the longest increasing subsequence. Elements don't need to be contiguous.",
+          "key_concepts": [
+            "DP state definition",
+            "Optimal substructure",
+            "Array memoization"
+          ],
+          "similar_to": "dp-1",
+          "estimated_time": "30-45 minutes",
+          "hint": "dp[i] = length of LIS ending at index i. For each i, check all j < i where arr[j] < arr[i].",
+          "approach": "Define dp[i] as LIS length ending at i. For each position, find max dp[j] where arr[j] < arr[i] and add 1."
+        },
+        {
+          "id": "dp-5",
+          "title": "Coin Change",
+          "skill_focus": "DP with bounded knapsack",
+          "difficulty": "medium",
+          "description": "Given coins of different denominations and a target amount, find the minimum number of coins needed. Return -1 if impossible.",
+          "key_concepts": [
+            "Unbounded knapsack variant",
+            "DP state transitions",
+            "Bottom-up DP"
+          ],
+          "similar_to": "dp-2",
+          "estimated_time": "30-45 minutes",
+          "hint": "dp[i] = minimum coins to make amount i. For each amount, try using each coin.",
+          "approach": "Use DP where dp[i] represents min coins for amount i. For each amount, try each coin and take minimum."
+        },
+        {
+          "id": "dp-6",
+          "title": "Word Break II",
+          "skill_focus": "DP with backtracking and memoization",
+          "difficulty": "hard",
+          "description": "Given a string and word list, return all possible sentences where the string is split into words from the list.",
+          "key_concepts": [
+            "DP with backtracking",
+            "Memoization of results",
+            "String segmentation"
+          ],
+          "similar_to": "dp-3",
+          "estimated_time": "45-60 minutes",
+          "hint": "Use DP to identify valid split points, then backtrack to build all possible combinations.",
+          "approach": "Memoize which substrings can be segmented. Then use backtracking to build all valid word break combinations."
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "category": "Intervals",
+      "difficulty": "medium",
+      "description": "Problems involving interval manipulation and merging",
+      "original_problems": ["int-1", "int-2", "int-3"],
+      "new_problems": [
+        {
+          "id": "int-4",
+          "title": "Non-overlapping Intervals",
+          "skill_focus": "Greedy interval selection",
+          "difficulty": "medium",
+          "description": "Given intervals, find the minimum number of intervals to remove so remaining intervals don't overlap.",
+          "key_concepts": [
+            "Interval sorting",
+            "Greedy algorithm",
+            "Overlap detection"
+          ],
+          "similar_to": "int-1",
+          "estimated_time": "30-40 minutes",
+          "hint": "Sort by end point. Greedily select intervals that don't overlap with previously selected.",
+          "approach": "Sort intervals by end time. Greedily select non-overlapping intervals and count removals."
+        },
+        {
+          "id": "int-5",
+          "title": "Insert Interval",
+          "skill_focus": "Interval insertion and merging",
+          "difficulty": "medium",
+          "description": "Insert a new interval into a list of non-overlapping intervals and merge if necessary.",
+          "key_concepts": [
+            "Interval comparison",
+            "Merging logic",
+            "Edge case handling"
+          ],
+          "similar_to": "int-2",
+          "estimated_time": "30-45 minutes",
+          "hint": "Add new interval, then merge overlapping intervals like in merge intervals problem.",
+          "approach": "Handle three cases: intervals ending before new interval starts, overlapping intervals to merge, and intervals starting after new interval ends."
+        },
+        {
+          "id": "int-6",
+          "title": "Minimum Meeting Rooms",
+          "skill_focus": "Interval scheduling with priority queue",
+          "difficulty": "hard",
+          "description": "Given meeting intervals, find the minimum number of conference rooms needed.",
+          "key_concepts": [
+            "Interval overlapping",
+            "Greedy scheduling",
+            "Priority queue usage"
+          ],
+          "similar_to": "int-3",
+          "estimated_time": "40-50 minutes",
+          "hint": "Sort by start time. Use min-heap to track meeting end times. If new meeting starts after earliest end, reuse room.",
+          "approach": "Sort meetings by start time. Use min-heap of end times. For each meeting, check if can reuse room with earliest end time."
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "category": "Two Pointers",
+      "difficulty": "medium",
+      "description": "Efficient pointer-based array traversal",
+      "original_problems": ["tp-1", "tp-2"],
+      "new_problems": [
+        {
+          "id": "tp-3",
+          "title": "3Sum",
+          "skill_focus": "Two pointers with fixed element",
+          "difficulty": "medium",
+          "description": "Find all unique triplets in array that sum to zero. Return all triplets without duplicates.",
+          "key_concepts": [
+            "Sorting optimization",
+            "Two-pointer approach",
+            "Duplicate handling"
+          ],
+          "similar_to": "tp-1",
+          "estimated_time": "30-45 minutes",
+          "hint": "Sort array. For each element, use two pointers to find pairs summing to -element.",
+          "approach": "Sort array. For each number, use two pointers to find pairs that sum to -number. Skip duplicates carefully."
+        },
+        {
+          "id": "tp-4",
+          "title": "Trapping Rain Water",
+          "skill_focus": "Two pointers with state tracking",
+          "difficulty": "hard",
+          "description": "Given elevation map, calculate how much water can be trapped after raining.",
+          "key_concepts": [
+            "Two-pointer technique",
+            "Left/right max tracking",
+            "Water volume calculation"
+          ],
+          "similar_to": "tp-2",
+          "estimated_time": "40-50 minutes",
+          "hint": "Use two pointers from both ends. Track max heights seen. Water at each position = min(left_max, right_max) - height.",
+          "approach": "Two pointers from both ends. At each step, move pointer with smaller max height and calculate trapped water."
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "category": "Sum",
+      "difficulty": "medium",
+      "description": "Problems involving finding sums with specific constraints",
+      "original_problems": ["sum-1"],
+      "new_problems": [
+        {
+          "id": "sum-2",
+          "title": "Two Sum II - Input Array is Sorted",
+          "skill_focus": "Two pointer sum finding with sorted input",
+          "difficulty": "easy",
+          "description": "Given a sorted array, find two numbers that add up to a target. Return indices (1-indexed).",
+          "key_concepts": [
+            "Two-pointer approach",
+            "Sorted array optimization",
+            "Index tracking"
+          ],
+          "similar_to": "sum-1",
+          "estimated_time": "20-30 minutes",
+          "hint": "Use two pointers from both ends. If sum is too small, move left pointer right. If too large, move right pointer left.",
+          "approach": "Two pointers from start and end. If sum equals target, return. If less, move left pointer. If more, move right pointer."
+        },
+        {
+          "id": "sum-3",
+          "title": "Subarray Sum Equals K",
+          "skill_focus": "Prefix sum with hash map",
+          "difficulty": "medium",
+          "description": "Find the number of subarrays with sum equal to k.",
+          "key_concepts": [
+            "Prefix sum technique",
+            "Hash map for cumulative sum tracking",
+            "Subarray sum optimization"
+          ],
+          "similar_to": "sum-1",
+          "estimated_time": "30-40 minutes",
+          "hint": "Track cumulative sum. For each position, check if (current_sum - k) exists in hash map.",
+          "approach": "Use prefix sum with hash map. For each element, add current sum to map. Check if (current_sum - k) exists to find valid subarrays."
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "category": "Monotonic Stack",
+      "difficulty": "hard",
+      "description": "Stack-based problems maintaining monotonic order",
+      "original_problems": ["ms-1"],
+      "new_problems": [
+        {
+          "id": "ms-2",
+          "title": "Largest Rectangle in Histogram",
+          "skill_focus": "Monotonic stack for range queries",
+          "difficulty": "hard",
+          "description": "Given histogram bars, find the area of largest rectangle that can be formed.",
+          "key_concepts": [
+            "Monotonic increasing stack",
+            "Left/right boundary finding",
+            "Area calculation optimization"
+          ],
+          "similar_to": "ms-1",
+          "estimated_time": "40-50 minutes",
+          "hint": "Use monotonic stack to find left and right boundaries for each bar where it's the minimum.",
+          "approach": "Use monotonic stack to efficiently find left and right span for each height. Calculate max area."
+        },
+        {
+          "id": "ms-3",
+          "title": "Daily Temperatures",
+          "skill_focus": "Monotonic decreasing stack",
+          "difficulty": "medium",
+          "description": "For each day's temperature, find how many days until a warmer temperature. Return array of days (0 if never).",
+          "key_concepts": [
+            "Monotonic decreasing stack",
+            "Next greater element pattern",
+            "Index tracking"
+          ],
+          "similar_to": "ms-1",
+          "estimated_time": "30-40 minutes",
+          "hint": "Use stack to track temperatures in decreasing order. Pop when finding warmer temp.",
+          "approach": "Traverse temperatures. Maintain stack of indices in decreasing temp order. When finding warmer, pop and record day difference."
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "category": "Word Break",
+      "difficulty": "medium",
+      "description": "Word segmentation and dictionary-based problems",
+      "original_problems": ["wb-1"],
+      "new_problems": [
+        {
+          "id": "wb-2",
+          "title": "Word Pattern",
+          "skill_focus": "Pattern matching with bidirectional mapping",
+          "difficulty": "easy",
+          "description": "Check if a string follows a pattern. Each character in pattern maps to unique word, and each word maps to unique character.",
+          "key_concepts": [
+            "Bidirectional mapping",
+            "Pattern validation",
+            "Hash map/set usage"
+          ],
+          "similar_to": "wb-1",
+          "estimated_time": "20-30 minutes",
+          "hint": "Maintain two mappings: character to word and word to character. They must be consistent.",
+          "approach": "Split words and validate pattern. Check bidirectional mapping consistency using two hash maps."
+        },
+        {
+          "id": "wb-3",
+          "title": "Concatenated Words",
+          "skill_focus": "DFS/DP word composition",
+          "difficulty": "hard",
+          "description": "Find all words in list that can be formed by concatenating other words from the list.",
+          "key_concepts": [
+            "Word segmentation",
+            "DP or DFS with word set",
+            "Recursive word building"
+          ],
+          "similar_to": "wb-1",
+          "estimated_time": "40-50 minutes",
+          "hint": "For each word, check if it can be formed by combining other words using DP or DFS.",
+          "approach": "Sort by length. For each word, use DP to check if it can be formed from words before it in the list."
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "category": "Bit Manipulation",
+      "difficulty": "medium",
+      "description": "Problems involving binary operations and bit patterns",
+      "original_problems": ["bit-1", "bit-2"],
+      "new_problems": [
+        {
+          "id": "bit-3",
+          "title": "Single Number III",
+          "skill_focus": "XOR with bit manipulation",
+          "difficulty": "medium",
+          "description": "Given array with three identical numbers and two unique numbers, find the two unique numbers.",
+          "key_concepts": [
+            "XOR properties",
+            "Bit manipulation for separation",
+            "Number isolation"
+          ],
+          "similar_to": "bit-1",
+          "estimated_time": "30-40 minutes",
+          "hint": "XOR all numbers. Result has bits set where two unique numbers differ. Use this to partition and find both.",
+          "approach": "XOR all to get XOR of two unique numbers. Find set bit to partition numbers. XOR partitions separately."
+        },
+        {
+          "id": "bit-4",
+          "title": "Number of 1 Bits",
+          "skill_focus": "Bit counting techniques",
+          "difficulty": "easy",
+          "description": "Count the number of 1 bits in binary representation of a number.",
+          "key_concepts": [
+            "Bit manipulation",
+            "Brian Kernighan's algorithm",
+            "Bit shifting"
+          ],
+          "similar_to": "bit-1",
+          "estimated_time": "15-25 minutes",
+          "hint": "Use n & (n-1) to remove rightmost 1 bit. Repeat until n becomes 0. Count iterations.",
+          "approach": "Use bit manipulation: n & (n-1) removes rightmost set bit. Count how many iterations to reach 0."
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "category": "Trie",
+      "difficulty": "hard",
+      "description": "Prefix tree data structure for string problems",
+      "original_problems": ["trie-1"],
+      "new_problems": [
+        {
+          "id": "trie-2",
+          "title": "Word Search II",
+          "skill_focus": "Trie with DFS on board",
+          "difficulty": "hard",
+          "description": "Find all words from a word list that exist in a 2D board. Words can be formed by moving adjacent cells.",
+          "key_concepts": [
+            "Trie for word lookup",
+            "DFS on 2D grid",
+            "Backtracking"
+          ],
+          "similar_to": "trie-1",
+          "estimated_time": "45-60 minutes",
+          "hint": "Build Trie from words. DFS on board, checking at each cell if prefix exists in Trie.",
+          "approach": "Build Trie of word list. DFS from each board cell, tracking path in Trie. When reaching word end in Trie, add to result."
+        },
+        {
+          "id": "trie-3",
+          "title": "Replace Words",
+          "skill_focus": "Trie for prefix matching and replacement",
+          "difficulty": "medium",
+          "description": "Given a dictionary and a sentence, replace words with their shortest root from dictionary.",
+          "key_concepts": [
+            "Trie construction",
+            "Prefix matching",
+            "String manipulation"
+          ],
+          "similar_to": "trie-1",
+          "estimated_time": "30-40 minutes",
+          "hint": "Build Trie from dictionary. For each word in sentence, find shortest root using Trie.",
+          "approach": "Build Trie of roots. For each word, traverse Trie to find shortest root, or use word if no root found."
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "category": "Combination",
+      "difficulty": "medium",
+      "description": "Generating and working with combinations",
+      "original_problems": ["comb-1"],
+      "new_problems": [
+        {
+          "id": "comb-2",
+          "title": "Combinations of Phone Number",
+          "skill_focus": "Combination generation with constraints",
+          "difficulty": "medium",
+          "description": "Given digit string like '23', return all possible letter combinations (2->ABC, 3->DEF).",
+          "key_concepts": [
+            "Backtracking for combinations",
+            "Mapping constraints",
+            "String building"
+          ],
+          "similar_to": "comb-1",
+          "estimated_time": "30-40 minutes",
+          "hint": "Use backtracking. For each digit, recursively build combinations with its mapped letters.",
+          "approach": "Map digits to letters. Use backtracking to generate all combinations by iterating through letters for each digit."
+        },
+        {
+          "id": "comb-3",
+          "title": "Combination Sum",
+          "skill_focus": "Combination with repetition allowed",
+          "difficulty": "medium",
+          "description": "Find all unique combinations that sum to a target. Each number can be used unlimited times.",
+          "key_concepts": [
+            "Backtracking with repetition",
+            "Sum tracking",
+            "Pruning optimization"
+          ],
+          "similar_to": "comb-1",
+          "estimated_time": "30-45 minutes",
+          "hint": "Use backtracking. Start from index to avoid duplicates. Each number can be reused.",
+          "approach": "Backtrack with current sum. For each number, try including it (reuse same index) or moving to next number."
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "category": "Backtracking",
+      "difficulty": "hard",
+      "description": "Recursive exploration of solution spaces",
+      "original_problems": ["bt-1", "bt-2", "bt-3"],
+      "new_problems": [
+        {
+          "id": "bt-4",
+          "title": "Sudoku Solver",
+          "skill_focus": "Backtracking with constraint satisfaction",
+          "difficulty": "hard",
+          "description": "Solve a Sudoku puzzle using backtracking. Fill empty cells following Sudoku rules.",
+          "key_concepts": [
+            "Backtracking algorithm",
+            "Constraint checking",
+            "Board state management"
+          ],
+          "similar_to": "bt-1",
+          "estimated_time": "50-60 minutes",
+          "hint": "For each empty cell, try digits 1-9. Check validity. Recurse if valid, backtrack if no solution.",
+          "approach": "Find empty cell. Try each digit. Check if valid (row/column/box). Recurse. Backtrack if needed."
+        },
+        {
+          "id": "bt-5",
+          "title": "Generate Parentheses",
+          "skill_focus": "Backtracking with balance tracking",
+          "difficulty": "medium",
+          "description": "Generate all combinations of well-formed parentheses with n pairs.",
+          "key_concepts": [
+            "Backtracking with counts",
+            "Valid sequence generation",
+            "Balance constraint"
+          ],
+          "similar_to": "bt-2",
+          "estimated_time": "25-35 minutes",
+          "hint": "Track open and close counts. Can add '(' if open < n. Can add ')' if close < open.",
+          "approach": "Backtrack with open and close parenthesis counts. Add '(' if count < n, ')' if close count < open count."
+        },
+        {
+          "id": "bt-6",
+          "title": "Palindrome Partitioning",
+          "skill_focus": "Backtracking with validation",
+          "difficulty": "medium",
+          "description": "Partition a string into all possible ways where each partition is a palindrome.",
+          "key_concepts": [
+            "Backtracking with partition",
+            "Palindrome checking",
+            "String segmentation"
+          ],
+          "similar_to": "bt-3",
+          "estimated_time": "30-40 minutes",
+          "hint": "Backtrack from each position. Check if substring is palindrome before recursing.",
+          "approach": "For each starting index, find all palindrome substrings. Backtrack with remaining string. Build all partitions."
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "total_original_categories": 15,
+    "total_original_problems": 35,
+    "total_new_problems": 30,
+    "total_all_problems": 65,
+    "created_at": "2026-06-05",
+    "branch": "feat/additional-dsa-problems",
+    "note": "Each new problem is designed to strengthen the same DSA fundamentals as the original problem but with different problem scenarios and additional challenges."
+  }
+}

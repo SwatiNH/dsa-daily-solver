@@ -1,0 +1,275 @@
+{
+  "dsa_templates": [
+    {
+      "id": 1,
+      "category": "Sliding Window",
+      "difficulty": "medium",
+      "description": "Master sliding window technique for array/string problems",
+      "problems": [
+        {
+          "id": "sw-1",
+          "url": "https://tinyurl.com/4uu63pd8",
+          "difficulty": "medium"
+        },
+        {
+          "id": "sw-2",
+          "url": "https://tinyurl.com/4wjfhb43",
+          "difficulty": "medium"
+        },
+        {
+          "id": "sw-3",
+          "url": "https://tinyurl.com/phhkmyvu",
+          "difficulty": "hard"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "category": "Array",
+      "difficulty": "easy",
+      "description": "Fundamental array manipulation problems",
+      "problems": [
+        {
+          "id": "arr-1",
+          "url": "https://tinyurl.com/3fdfbxxu",
+          "difficulty": "easy"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "category": "Binary Search",
+      "difficulty": "medium",
+      "description": "Efficient searching techniques using binary search",
+      "problems": [
+        {
+          "id": "bs-1",
+          "url": "https://tinyurl.com/ycy9a3su",
+          "difficulty": "medium"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "category": "DFS-BFS",
+      "difficulty": "hard",
+      "description": "Graph traversal techniques - Depth First and Breadth First Search",
+      "problems": [
+        {
+          "id": "dfs-1",
+          "url": "https://tinyurl.com/3z6mk76j",
+          "difficulty": "hard"
+        },
+        {
+          "id": "dfs-2",
+          "url": "https://tinyurl.com/bdd7e5ds",
+          "difficulty": "hard"
+        },
+        {
+          "id": "dfs-3",
+          "url": "https://tinyurl.com/msu9tjr2",
+          "difficulty": "medium"
+        },
+        {
+          "id": "dfs-4",
+          "url": "https://tinyurl.com/39k349bz",
+          "difficulty": "medium"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "category": "Tree Traversal",
+      "difficulty": "medium",
+      "description": "In-order, Pre-order, Post-order and Level-order tree traversals",
+      "problems": [
+        {
+          "id": "tree-1",
+          "url": "https://tinyurl.com/3rmbsf8a",
+          "difficulty": "medium"
+        },
+        {
+          "id": "tree-2",
+          "url": "https://tinyurl.com/mxxdpxdn",
+          "difficulty": "medium"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "category": "Dynamic Programming",
+      "difficulty": "hard",
+      "description": "Optimization problems using memoization and tabulation",
+      "problems": [
+        {
+          "id": "dp-1",
+          "url": "https://tinyurl.com/mryw9hjv",
+          "difficulty": "hard"
+        },
+        {
+          "id": "dp-2",
+          "url": "https://tinyurl.com/y5fbnpdn",
+          "difficulty": "hard"
+        },
+        {
+          "id": "dp-3",
+          "url": "https://tinyurl.com/5ch8mwet",
+          "difficulty": "hard"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "category": "Intervals",
+      "difficulty": "medium",
+      "description": "Problems involving interval manipulation and merging",
+      "problems": [
+        {
+          "id": "int-1",
+          "url": "https://tinyurl.com/2jyz4s3v",
+          "difficulty": "medium"
+        },
+        {
+          "id": "int-2",
+          "url": "https://tinyurl.com/284njb6a",
+          "difficulty": "medium"
+        },
+        {
+          "id": "int-3",
+          "url": "https://tinyurl.com/2sc5jr5p",
+          "difficulty": "hard"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "category": "Two Pointers",
+      "difficulty": "medium",
+      "description": "Efficient pointer-based array traversal",
+      "problems": [
+        {
+          "id": "tp-1",
+          "url": "https://tinyurl.com/49pyhjyc",
+          "difficulty": "medium"
+        },
+        {
+          "id": "tp-2",
+          "url": "https://tinyurl.com/y3xn4ccm",
+          "difficulty": "medium"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "category": "Sum",
+      "difficulty": "medium",
+      "description": "Problems involving finding sums with specific constraints",
+      "problems": [
+        {
+          "id": "sum-1",
+          "url": "https://tinyurl.com/4tdpj6sj",
+          "difficulty": "medium"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "category": "Monotonic Stack",
+      "difficulty": "hard",
+      "description": "Stack-based problems maintaining monotonic order",
+      "problems": [
+        {
+          "id": "ms-1",
+          "url": "https://tinyurl.com/2mzzdmsn",
+          "difficulty": "hard"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "category": "Word Break",
+      "difficulty": "medium",
+      "description": "Word segmentation and dictionary-based problems",
+      "problems": [
+        {
+          "id": "wb-1",
+          "url": "https://tinyurl.com/ys8j9d9t",
+          "difficulty": "medium"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "category": "Bit Manipulation",
+      "difficulty": "medium",
+      "description": "Problems involving binary operations and bit patterns",
+      "problems": [
+        {
+          "id": "bit-1",
+          "url": "https://tinyurl.com/3zbksfzm",
+          "difficulty": "medium"
+        },
+        {
+          "id": "bit-2",
+          "url": "https://tinyurl.com/39p6uhfw",
+          "difficulty": "hard"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "category": "Trie",
+      "difficulty": "hard",
+      "description": "Prefix tree data structure for string problems",
+      "problems": [
+        {
+          "id": "trie-1",
+          "url": "https://tinyurl.com/mr2bbxcn",
+          "difficulty": "hard"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "category": "Combination",
+      "difficulty": "medium",
+      "description": "Generating and working with combinations",
+      "problems": [
+        {
+          "id": "comb-1",
+          "url": "https://tinyurl.com/535bwnm8",
+          "difficulty": "medium"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "category": "Backtracking",
+      "difficulty": "hard",
+      "description": "Recursive exploration of solution spaces",
+      "problems": [
+        {
+          "id": "bt-1",
+          "url": "https://tinyurl.com/4zebhk67",
+          "difficulty": "hard"
+        },
+        {
+          "id": "bt-2",
+          "url": "https://tinyurl.com/2tsyb2bt",
+          "difficulty": "hard"
+        },
+        {
+          "id": "bt-3",
+          "url": "https://tinyurl.com/2tpdw3n3",
+          "difficulty": "hard"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "total_categories": 15,
+    "total_problems": 35,
+    "created_at": "2026-06-05",
+    "target_audience": "Senior and Lead Engineers preparing for interviews"
+  }
+}
